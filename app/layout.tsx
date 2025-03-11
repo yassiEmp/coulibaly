@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Unbounded } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+
+const unbounded = Unbounded({
+  subsets: ["latin"]
+})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -25,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="w-full h-full flex bg-background">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full h-full flex flex-col bg-background`}
+        className={`${unbounded.className} antialiased w-full h-full flex flex-col bg-background`}
       >
         {children}
       </body>
