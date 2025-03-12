@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="w-full h-full flex bg-background">
+    <html lang="en" className="w-full h-fit flex bg-background">
       <body
         className={`${unbounded.className} antialiased w-full h-full flex flex-col bg-background`}
       >
