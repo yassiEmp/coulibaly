@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Logo from "@/public/next.svg";
 import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
-import { Diplomata, Roboto, Space_Grotesk } from "next/font/google";
+import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
+import { Roboto, Space_Grotesk } from "next/font/google";
 import Learner from "@/app/assets/learner.png";
 import DiplomeCard from "@/components/ui/diplomeCard";
+import Link from "next/link";
+import Formation from "@/components/ui/Formation";
 const space = Space_Grotesk({
   subsets: ["latin"],
 });
@@ -43,7 +45,7 @@ export default function Home() {
       </nav>
       {/* the header of the website */}
       <section className="min-h-fit h-[772px] flex justify-center items-center text-white">
-        <header className="flex w-[95%] h-[95%] bg-secondary p-8 max-w-[1560px] rounded-2xl">
+        <header className="flex w-[95%] h-[95%] bg-secondary p-8 max-w-[1560px] rounded-2xl md:flex-row flex-col">
           <section className="w-1/2 h-full flex flex-col justify-center gap-10">
             <h1 className="text-6xl font-bold leading-[120%] bg-gradient-to-b from-background bg-clip-text text-transparent to-white ">
               Bienvenue au Lycée <br></br>Technique F.M.<br></br> Coulibaly{" "}
@@ -72,6 +74,7 @@ export default function Home() {
             alt="a picture of a student with a lot of books inb hands"
             width={740}
             height={673}
+            className="object-cover grow"
           />
         </header>
       </section>
@@ -89,14 +92,15 @@ export default function Home() {
             réussies.
           </p>
         </div>
-        <section className="pt-[400px]">
-          <div>
+        <section className="pt-[500px] relative overflow-hidden h-full min-h-[1020px]">
+          <div className="flex justify-center gap-16">
             <DiplomeCard
               Logo={Logo}
               space={space}
               roboto={roboto}
               diplom="Certificat d'Aptitude Professionnelle (CAP)"
               descrip="Formez-vous aux métiers techniques avec le CAP."
+              css=" -rotate-z-35 origin-right!"
             />
             <DiplomeCard
               Logo={Logo}
@@ -104,8 +108,33 @@ export default function Home() {
               roboto={roboto}
               diplom="Baccalauréat Technologique et Professionnel"
               descrip="Obtenez votre Baccalauréat dans des filières variées."
+              css=" from-[#B5E48C]! to-[#5BBB98]! bg-gradient-to-b! -translate-y-36 origin-center!"
+            />
+            <DiplomeCard
+              Logo={Logo}
+              space={space}
+              roboto={roboto}
+              diplom="Diplôme de Technicien (DT)"
+              descrip="Devenez technicien qualifié grâce à notre DT."
+              css="from-[#D9ED92]! to-[#52B69A]! bg-gradient-to-l! rotate-z-35"
             />
           </div>
+          <div className=" absolute flex justify-center items-center w-[110%] h-full top-1/2 left-[-5%] bg-background rounded-tl-full rounded-tr-full z-50 shad ">
+            <div className="relative max-w-[100vw] w-full flex justify-center h-1/2 gap-8">
+              <Button className="p-6" variant='outline'>En Savoir Plus</Button>
+              <Link href="/" className="w-fit h-12 flex items-center gap-2 underline">S'inscrire <ChevronRight /> </Link>
+            </div>
+          </div>
+        </section>
+        <section className="w-full h-full">
+          <div className="w-1/2">
+            <h2 className="text-center text-xl w-fit">Formation</h2>
+            <p className="text-4xl text-left font-medium w-fit">Découvrez nos formations variées pour un avenir professionnel prometteur et épanouissant.</p>
+          </div>
+          {/* slider for all the formation */}
+          <section className=" h-fit p-12">
+            <Formation />
+          </section>
         </section>
       </main>
     </>

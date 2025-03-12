@@ -2,9 +2,9 @@ import { NextFont } from 'next/dist/compiled/@next/font'
 import Image from 'next/image'
 import React from 'react'
 
-const DiplomeCard = ({Logo,space,roboto,diplom,descrip}:{Logo:any,space:NextFont,roboto:NextFont,diplom:string,descrip:string}) => {
+const DiplomeCard = ({Logo,space,roboto,diplom,descrip,css}:{Logo:any,space:NextFont,roboto:NextFont,diplom:string,descrip:string,css?: string}) => {
   return (
-    <div className="card w-[405px] h-[479px] rounded-lg flex flex-col items-center p-[8px_16px] gap-[100px] relative bg-gradient-to-r from-[#34A0A4] to-[#168AAD]">
+    <div className={`card min-w-[405px] w-[405px] h-[479px] rounded-lg flex flex-col items-center p-[14px_16px] gap-[100px] relative diplom -translate-y-24 origin-right bg-gradient-to-r from-[#34A0A4] to-[#168AAD] ${css}`}>
             <Image
               src={Logo}
               alt="a logo of the school "
