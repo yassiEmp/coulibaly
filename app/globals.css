@@ -3,23 +3,29 @@
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
+
 *{
-  border: 1px solid black ;
+  /* border: 1px solid black ; */
   box-sizing: border-box;
 }
+
 .shad{/* Vector 1 */
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .masquer{
   clip-path: circle(50% at 50% 50%);
 }
+
 .diplom{
   transform-origin: left;
   transition: all 0.45s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
+
 .diplom:hover{
   transform: translateY(-50%) scale(1.1);
 }
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

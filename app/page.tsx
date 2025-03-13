@@ -6,7 +6,7 @@ import { Roboto, Space_Grotesk } from "next/font/google";
 import Learner from "@/app/assets/learner.png";
 import DiplomeCard from "@/components/ui/diplomeCard";
 import Link from "next/link";
-import Formation from "@/components/ui/Formation";
+import {CarouselUi} from "@/components/CarouselUi";
 const space = Space_Grotesk({
   subsets: ["latin"],
 });
@@ -93,7 +93,7 @@ export default function Home() {
           </p>
         </div>
         <section className="pt-[500px] relative overflow-hidden h-full min-h-[1020px]">
-          <div className="flex justify-center gap-16">
+          <div className="flex justify-center gap-8">
             <DiplomeCard
               Logo={Logo}
               space={space}
@@ -126,14 +126,16 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full h-full">
+        <section className="w-full h-full p-16">
           <div className="w-1/2">
             <h2 className="text-center text-xl w-fit">Formation</h2>
             <p className="text-4xl text-left font-medium w-fit">Découvrez nos formations variées pour un avenir professionnel prometteur et épanouissant.</p>
           </div>
           {/* slider for all the formation */}
-          <section className=" h-fit p-12">
-            <Formation />
+          <section className="p-12 w-full h-[800px]">
+            {/* <Formation /> */}
+            <CarouselUi />
+            {/* <Formation /> */}
           </section>
         </section>
       </main>

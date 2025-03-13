@@ -2,7 +2,8 @@ import React from "react";
 
 const Formation = () => {
   return (
-    <div className="flex flex-col justify-between items-center p-2 relative w-[400px] h-[506px] border rounded-2xl border-gray-400">
+    <div
+      className="flex flex-col justify-between items-center p-2 relative h-[506px] border rounded-2xl bg-[#bdbdbd50] border-gray-400 card">
       <div className="flex flex-col justify-between w-full h-full p-4 rounded-[10px] bg-[#89C2D9]">
         <p className="text-center">Diplome de: </p>
         <p className="text-2xl font-medium  text-center">Secrétariat (G1)</p>
