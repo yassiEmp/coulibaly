@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Logo from "@/public/next.svg";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronDown, ChevronRight } from "lucide-react";
 import { Roboto, Space_Grotesk } from "next/font/google";
 import Learner from "@/app/assets/learner.png";
 import DiplomeCard from "@/components/ui/diplomeCard";
 import Link from "next/link";
-import {CarouselUi} from "@/components/CarouselUi";
+import { CarouselUi } from "@/components/CarouselUi";
+import PlaceHolder from "@/app/assets/placeHolder.svg";
+import Personel from "@/components/Personel";
 const space = Space_Grotesk({
   subsets: ["latin"],
 });
@@ -121,22 +123,104 @@ export default function Home() {
           </div>
           <div className=" absolute flex justify-center items-center w-[110%] h-full top-1/2 left-[-5%] bg-background rounded-tl-full rounded-tr-full z-50 shad ">
             <div className="relative max-w-[100vw] w-full flex justify-center h-1/2 gap-8">
-              <Button className="p-6" variant='outline'>En Savoir Plus</Button>
-              <Link href="/" className="w-fit h-12 flex items-center gap-2 underline">S'inscrire <ChevronRight /> </Link>
+              <Button className="p-6" variant="outline">
+                En Savoir Plus
+              </Button>
+              <Link
+                href="/"
+                className="w-fit h-12 flex items-center gap-2 underline"
+              >
+                S'inscrire <ChevronRight />{" "}
+              </Link>
             </div>
           </div>
         </section>
         <section className="w-full h-full p-16">
           <div className="w-1/2">
             <h2 className="text-center text-xl w-fit">Formation</h2>
-            <p className="text-4xl text-left font-medium w-fit">Découvrez nos formations variées pour un avenir professionnel prometteur et épanouissant.</p>
+            <p className="text-4xl text-left font-medium w-fit">
+              Découvrez nos formations variées pour un avenir professionnel
+              prometteur et épanouissant.
+            </p>
           </div>
           {/* slider for all the formation */}
-          <section className="p-12 w-full h-[800px]">
+          <section className="p-12 w-full h-fit">
             {/* <Formation /> */}
             <CarouselUi />
             {/* <Formation /> */}
           </section>
+        </section>
+        <section className="w-full h-full p-24 flex justify-around items-center gap-12">
+          <section className="w-1/2 h-full max-h-fit flex justify-around flex-col gap-12">
+            <div className="w-1/2">
+              <h2 className="text-center text-xl w-fit">Avantages</h2>
+              <p className="text-4xl text-left font-medium w-fit">
+                Pourquoi choisir le Lycée Technique Coulibaly ?
+              </p>
+            </div>
+
+            <p>
+              Étudier au Lycée Technique F.M. Coulibaly, c'est bénéficier d'une
+              formation de qualité, soutenue par des partenariats solides avec
+              des entreprises. Nos élèves profitent de stages pratiques qui
+              favorisent leur insertion professionnelle.
+            </p>
+            <div className="w-full flex gap-8">
+              <div className="w-1/2 h-56">
+                <Image src={Logo} alt="" width={100} height={100} />
+                <p className="font-bold text-2xs">Partenariats solides</p>
+                <p>
+                  Collaboration avec des entreprises locales pour des
+                  opportunités d'apprentissage enrichissantes.
+                </p>
+              </div>
+              <div className="w-1/2 h-56">
+                <Image src={Logo} alt="" width={100} height={100} />
+                <p className="font-bold text-2xs">Stages pratiques.</p>
+                <p>
+                  Des stages en entreprise pour acquérir une expérience concrète
+                  et valorisante.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <Button className="bg-background p-6 text-black">
+                En savoir plus
+              </Button>
+              <Button
+                variant="outline"
+                className="p-6 border-white bg-transparent"
+              >
+                Inscription
+              </Button>
+            </div>
+          </section>
+          <div className="grow h-full flex justify-center items-center bg-white rounded-2xl">
+            <Image src={PlaceHolder} alt="a descriptive picture "></Image>
+          </div>
+        </section>
+        <section className="flex flex-col items-center p-[112px_64px] gap-20 w-full h-fit bg-gradient-to-r from-[#ADE8F4] to-[#89C2D9]">
+          <div className="w-full flex flex-col items-center">
+            <h2 className="text-center text-xl w-fit">Équipe</h2>
+            <p className="text-4xl text-left font-medium w-fit">Notre équipe</p>
+            <p>Des professionnels dédiés à votre réussite académique.</p>
+          </div>
+          <div className="grid grid-cols-3 gap-20 justify-items-center">
+            <Personel placeHolder={PlaceHolder} />
+            <Personel placeHolder={PlaceHolder} />
+            <Personel placeHolder={PlaceHolder} />
+            <Personel placeHolder={PlaceHolder} />
+            <Personel placeHolder={PlaceHolder} />
+            <Personel placeHolder={PlaceHolder} />
+            <Personel placeHolder={PlaceHolder} />
+            <Personel placeHolder={PlaceHolder} />
+            <Personel placeHolder={PlaceHolder} />
+            <Personel placeHolder={PlaceHolder} />
+            <Personel placeHolder={PlaceHolder} />
+            <Personel placeHolder={PlaceHolder} />
+            <Personel placeHolder={PlaceHolder} />
+            <Personel placeHolder={PlaceHolder} />
+          </div>
         </section>
       </main>
     </>
