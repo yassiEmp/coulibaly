@@ -9,17 +9,19 @@
   box-sizing: border-box;
 }
 
-.shad{/* Vector 1 */
+.shad{
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
+.headerText{
+  @apply md:text-4xl text-left font-medium w-fit text-[#0A1128] ;
+}
 .masquer{
   clip-path: circle(50% at 50% 50%);
 }
 
 .diplom{
   transform-origin: left;
-  transition: all 0.45s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: all 0.45s cubic-bezier(0.68, -0.1, 0.27, 1.55);
 }
 
 .diplom:hover{

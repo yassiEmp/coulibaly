@@ -3,7 +3,7 @@ import React from "react";
 
 const Personel = ({placeHolder}:{placeHolder: any}) => {
   return (
-    <div className="flex flex-col items-center p-0 gap-6 w-[405px] h-[273px] rounded-none flex-grow self-center justify-self-center">
+    <div className="flex flex-col items-center p-0 gap-6 w-[405px] max-w-full h-[273px] rounded-none flex-grow self-center justify-self-center min-h-fit justify-between">
       <div>
         <Image
           src={placeHolder}

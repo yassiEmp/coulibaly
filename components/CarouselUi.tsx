@@ -24,8 +24,8 @@ export function CarouselUi() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className=" md:block hidden "/>
+      <CarouselNext className=" md:block hidden "/>
     </Carousel>
   )
 }

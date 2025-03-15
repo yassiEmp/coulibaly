@@ -26,7 +26,7 @@ const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
-export default function Desktop() {
+export default function Mobile() {
   return (
     <>
       {/* the navigation of the website */}
@@ -136,8 +136,8 @@ export default function Desktop() {
               css="from-[#D9ED92]! to-[#52B69A]! bg-gradient-to-l! rotate-z-35"
             />
           </div>
-          <div className=" absolute flex items-start pt-20 justify-center w-[110%] min-h-fit h-full top-1/2 left-[-5%] bg-background rounded-tl-full rounded-tr-full z-50 shad ">
-            <div className="relative max-w-[100vw] w-full flex md:justify-center! justify-start grow gap-8 flex-col items-center ">
+          <div className=" absolute flex justify-center items-center w-[110%] h-full top-1/2 left-[-5%] bg-background rounded-tl-full rounded-tr-full z-50 shad ">
+            <div className="relative max-w-[100vw] w-full flex justify-center h-1/2 gap-8">
               <Button className="p-6" variant="outline">
                 En Savoir Plus
               </Button>
@@ -150,8 +150,8 @@ export default function Desktop() {
             </div>
           </div>
         </section>
-        <section className="w-full h-full md:p-16 p-4">
-          <div className="md:w-1/2 w-full">
+        <section className="w-full h-full p-16">
+          <div className="w-1/2">
             <h2 className="text-center text-xl w-fit">Formation</h2>
             <p className="headerText">
               Découvrez nos formations variées pour un avenir professionnel
@@ -159,7 +159,7 @@ export default function Desktop() {
             </p>
           </div>
           {/* slider for all the formation */}
-          <section className="md:p-12 p-4 w-full h-fit">
+          <section className="p-12 w-full h-fit">
             {/* <Formation /> */}
             <CarouselUi />
             {/* <Formation /> */}
