@@ -165,11 +165,11 @@ export default function Desktop() {
             {/* <Formation /> */}
           </section>
         </section>
-        <section className="w-full h-full p-16 flex justify-around items-center gap-12 min-[1024px]:flex-row  flex-col">
-          <section className="min-[1024px]:w-full!  h-full max-h-fit flex justify-around flex-col gap-12  ">
+        <section className="w-full h-full lg:p-16 p-4 flex justify-around items-center gap-12 min-[1024px]:flex-row  flex-col">
+          <section className="min-[1024px]:w-full! h-full max-h-fit flex justify-around flex-col gap-12  pl-2 pr-2 w-full">
             <div className="md:w-1/2 w-full">
-              <h2 className="text-center text-xl w-fit">Avantages</h2>
-              <p className="headerText">
+              <h2 className="text-center text-xl md:w-fit text-wrap w-full">Avantages</h2>
+              <p className="headerText w-full">
                 Pourquoi choisir le Lycée Technique Coulibaly ?
               </p>
             </div>
@@ -180,8 +180,8 @@ export default function Desktop() {
               des entreprises. Nos élèves profitent de stages pratiques qui
               favorisent leur insertion professionnelle.
             </p>
-            <div className="w-full flex gap-8">
-              <div className="w-1/2 h-56">
+            <div className="w-full flex min-[500px]:flex-row flex-col gap-8">
+              <div className="md:w-1/2 w-full h-56">
                 <Image src={Logo} alt="" width={100} height={100} />
                 <p className="font-bold text-2xs">Partenariats solides</p>
                 <p>
@@ -189,7 +189,7 @@ export default function Desktop() {
                   opportunités d'apprentissage enrichissantes.
                 </p>
               </div>
-              <div className="w-1/2 h-56">
+              <div className="md:w-1/2 w-full h-56">
                 <Image src={Logo} alt="" width={100} height={100} />
                 <p className="font-bold text-2xs">Stages pratiques.</p>
                 <p>
@@ -198,7 +198,7 @@ export default function Desktop() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 min-[500px]:flex-row flex-col">
               <Button className="bg-background p-6 text-black">
                 En savoir plus
               </Button>
@@ -210,11 +210,11 @@ export default function Desktop() {
               </Button>
             </div>
           </section>
-          <div className="grow h-full flex justify-center items-center bg-white rounded-2xl w-1/2 min-[1024px]:w-full! md:min-w-[450px] ">
-            <Image src={PlaceHolder} alt="a descriptive picture "></Image>
+          <div className="grow h-full flex justify-center items-center bg-white rounded-2xl w-full ">
+            <Image src={PlaceHolder} alt="a descriptive picture " className='w-full h-full object-contain '></Image>
           </div>
         </section>
-        <section className="flex flex-col items-center p-[112px_64px] gap-20 w-full h-fit bg-gradient-to-r from-[#ADE8F4] to-[#89C2D9]">
+        <section className="flex flex-col items-center min-[500px]:p-[112px_64px] p-4 gap-20 w-full h-fit bg-gradient-to-r from-[#ADE8F4] to-[#89C2D9]">
           <div className="w-full flex flex-col items-center">
             <h2 className="text-center text-xl w-fit">Équipe</h2>
             <p className="headerText">Notre équipe</p>
@@ -237,7 +237,7 @@ export default function Desktop() {
             <Personel placeHolder={PlaceHolder} />
           </div>
         </section>
-        <section className="flex flex-col items-start p-[112px_64px] gap-20 w-full min-h-fit h-[717.89px] bg-gradient-to-r from-[#81C3D7] to-[#89C2D9]">
+        <section className="flex flex-col items-start min-[500px]:p-[112px_64px] p-4 gap-20 w-full min-h-fit h-[717.89px] bg-gradient-to-r from-[#81C3D7] to-[#89C2D9]">
           <div className="w-1/2 min-w-fit">
             <p className="headerText text-3xl">Témoignages clients</p>
             <p>Des expériences enrichissantes et formatrices au Lycée.</p>
@@ -251,7 +251,7 @@ export default function Desktop() {
             <Review font={space} />
           </div>
         </section>
-        <section className="h-full flex flex-col p-16 gap-16">
+        <section className="h-full flex flex-col min-[500px]:p-16 p-4 gap-16">
           <div>
             <p className="font-bold">contact</p>
             <h2 className="headerText md:text-5xl! text-4xl">Nous Contacter</h2>
