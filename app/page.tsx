@@ -82,7 +82,9 @@ export default function Desktop() {
                 </Button>
               </div>
               <Button className="bg-background h-fit p-4 w-full min-w-[230px] text-black md:hidden flex text-wrap">
-                <p className="text-[calc(1vw+1rem)] max-[500px]:text-wrap ">👉 Inscrivez-vous aujourd&apos;hui !</p>
+                <p className="text-[calc(1vw+1rem)] max-[500px]:text-wrap ">
+                  👉 Inscrivez-vous aujourd&apos;hui !
+                </p>
               </Button>
             </div>
           </section>
@@ -98,7 +100,7 @@ export default function Desktop() {
       <main className="flex flex-col justify-center pt-20 min-h-fit h-[1031px] ">
         <section className="w-full flex flex-col justify-center items-center md:pl-[20%] md:pr-[20%] p-4 gap-10">
           <h3 className="text-center text-xl w-fit">Formations</h3>
-          <h2 className="text-4xl text-center font-medium w-fit text-[calc(1.5vw+1rem)] ">
+          <h2 className="text-4xl text-primary text-center font-medium w-fit text-[calc(1.5vw+1rem)] ">
             Découvrez nos formations techniques et professionnelles
           </h2>
           <p className="text-2xs w-fit text-center ">
@@ -168,7 +170,9 @@ export default function Desktop() {
         <section className="w-full h-full lg:p-16 p-4 flex justify-around items-center gap-12 min-[1024px]:flex-row  flex-col">
           <section className="min-[1024px]:w-full! h-full max-h-fit flex justify-around flex-col gap-12  pl-2 pr-2 w-full">
             <div className="md:w-1/2 w-full">
-              <h2 className="text-center text-xl md:w-fit text-wrap w-full">Avantages</h2>
+              <h2 className="text-center text-xl md:w-fit text-wrap w-full">
+                Avantages
+              </h2>
               <p className="headerText w-full">
                 Pourquoi choisir le Lycée Technique Coulibaly ?
               </p>
@@ -211,7 +215,11 @@ export default function Desktop() {
             </div>
           </section>
           <div className="grow h-full flex justify-center items-center bg-white rounded-2xl w-full ">
-            <Image src={PlaceHolder} alt="a descriptive picture " className='w-full h-full object-contain '></Image>
+            <Image
+              src={PlaceHolder}
+              alt="a descriptive picture "
+              className="w-full h-full object-contain "
+            ></Image>
           </div>
         </section>
         <section className="flex flex-col items-center min-[500px]:p-[112px_64px] p-4 gap-20 w-full h-fit bg-gradient-to-r from-[#ADE8F4] to-[#89C2D9]">
@@ -221,20 +229,41 @@ export default function Desktop() {
             <p>Des professionnels dédiés à votre réussite académique.</p>
           </div>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-16 justify-items-center w-full max-w-[1900px] min-w-fit ">
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
+          <Personel>
+              <Image
+                src={PlaceHolder}
+                alt="a picture of him/her"
+                className="w-16 h-16 overflow-hidden object-cover rounded-full"
+              ></Image>
+            </Personel>
+            <Personel>
+              <Image
+                src={PlaceHolder}
+                alt="a picture of him/her"
+                className="w-16 h-16 overflow-hidden object-cover rounded-full"
+              ></Image>
+            </Personel>
+            <Personel>
+              <Image
+                src={PlaceHolder}
+                alt="a picture of him/her"
+                className="w-16 h-16 overflow-hidden object-cover rounded-full"
+              ></Image>
+            </Personel>
+            <Personel>
+              <Image
+                src={PlaceHolder}
+                alt="a picture of him/her"
+                className="w-16 h-16 overflow-hidden object-cover rounded-full"
+              ></Image>
+            </Personel>
+            <Personel>
+              <Image
+                src={PlaceHolder}
+                alt="a picture of him/her"
+                className="w-16 h-16 overflow-hidden object-cover rounded-full"
+              ></Image>
+            </Personel>
           </div>
         </section>
         <section className="flex flex-col items-start min-[500px]:p-[112px_64px] p-4 gap-20 w-full min-h-fit h-[717.89px] bg-gradient-to-r from-[#81C3D7] to-[#89C2D9]">

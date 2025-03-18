@@ -27,6 +27,14 @@
 .diplom:hover{
   transform: translateY(-50%) scale(1.1);
 }
+.diplomMobile{
+  transform-origin: left;
+  transition: all 0.45s cubic-bezier(0.68, -0.1, 0.27, 1.55);
+}
+
+/* .diplomMobile:hover{
+  transform: translateY(-50%) scale(1.1);
+} */
 
 @theme inline {
   --color-background: var(--background);
@@ -105,6 +113,7 @@
   --sidebar-ring: oklch(0.708 0 0);
   --gradient-start: #B5E48C;
   --gradient-end: #5BBB98;
+  --highlight: #0A1128 ;
 }
 
 .dark {

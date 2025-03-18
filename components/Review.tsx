@@ -4,17 +4,17 @@ import { NextFont } from "next/dist/compiled/@next/font";
 import Image from "next/image";
 import React from "react";
 
-const Review = ({font}:{font?:NextFont}) => {
+const Review = ({ font }: { font?: NextFont }) => {
   return (
     <div className="w-[550px] max-w-full min-h-fit h-fit flex flex-col gap-2">
       {/* for the start rating  */}
       <div className="flex gap-0.5">
-      <StarIcon fill="black" className="" />
-      <StarIcon fill="black" className="" />
-      <StarIcon fill="black" className="" />
-      <StarIcon fill="black" className="" />
-      <StarIcon fill="black" className="" />
-      <StarIcon fill="black" className="" />
+        <StarIcon fill="black" className="" />
+        <StarIcon fill="black" className="" />
+        <StarIcon fill="black" className="" />
+        <StarIcon fill="black" className="" />
+        <StarIcon fill="black" className="" />
+        <StarIcon fill="black" className="" />
       </div>
       {/* the person that had commented */}
       <div className="flex gap-4">
@@ -32,7 +32,7 @@ const Review = ({font}:{font?:NextFont}) => {
           <p>Ancienne élève, Entreprise X</p>
         </div>
       </div>
-      <p className={`font-bold ${font?font.className:""}`}>
+      <p className={`font-bold ${font ? font.className : ""}`}>
         "Le Lycée Technique Coulibaly m'a ouvert des portes vers l'avenir. Grâce
         à leur formation, j'ai pu décrocher un emploi rapidement."
       </p>
@@ -41,4 +41,3 @@ const Review = ({font}:{font?:NextFont}) => {
 };
 
 export default Review;
-

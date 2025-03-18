@@ -98,8 +98,9 @@ export default function Mobile() {
       <main className="flex flex-col justify-center pt-20 min-h-fit h-[1031px] ">
         <section className="w-full flex flex-col justify-center items-center md:pl-[20%] md:pr-[20%] p-4 gap-10">
           <h3 className="text-center text-xl w-fit">Formations</h3>
-          <h2 className="text-4xl text-center font-medium w-fit text-[calc(1.5vw+1rem)] ">
-            Découvrez nos formations techniques et professionnelles
+          <h2 className="font-bold text-center text-[color:var(--highlight)] w-fit text-[calc(1.9vw+2rem)] leading-[120%] ">
+            <p>🎓 </p>
+            Découvrez <br/> nos<br/>  formations
           </h2>
           <p className="text-2xs w-fit text-center ">
             Le Lycée Technique F.M. Coulibaly propose une gamme variée de
@@ -109,7 +110,7 @@ export default function Mobile() {
             réussies.
           </p>
         </section>
-        <section className="pt-[500px] relative overflow-hidden h-full min-h-[1020px]">
+        <section className="pt-[200px] relative overflow-hidden h-full min-h-[1020px]">
           <div className="flex justify-center gap-8">
             <DiplomeCard
               Logo={Logo}
@@ -117,7 +118,7 @@ export default function Mobile() {
               roboto={roboto}
               diplom="Certificat d'Aptitude Professionnelle (CAP)"
               descrip="Formez-vous aux métiers techniques avec le CAP."
-              css=" -rotate-z-35 origin-right!"
+              css=" -rotate-z-15 origin-right! translate-x-50 "
             />
             <DiplomeCard
               Logo={Logo}
@@ -133,11 +134,11 @@ export default function Mobile() {
               roboto={roboto}
               diplom="Diplôme de Technicien (DT)"
               descrip="Devenez technicien qualifié grâce à notre DT."
-              css="from-[#D9ED92]! to-[#52B69A]! bg-gradient-to-l! rotate-z-35"
+              css="from-[#D9ED92]! to-[#52B69A]! bg-gradient-to-l! rotate-z-15 -translate-x-50"
             />
           </div>
-          <div className=" absolute flex justify-center items-center w-[110%] h-full top-1/2 left-[-5%] bg-background rounded-tl-full rounded-tr-full z-50 shad ">
-            <div className="relative max-w-[100vw] w-full flex justify-center h-1/2 gap-8">
+          <div className=" absolute flex items-start pt-20 justify-center w-[140%] min-h-fit h-full top-1/2 left-[-20%] bg-background rounded-tl-full rounded-tr-full z-50 shad ">
+            <div className="relative max-w-[100vw] w-full flex md:justify-center! justify-start grow gap-8 flex-col items-center ">
               <Button className="p-6" variant="outline">
                 En Savoir Plus
               </Button>
@@ -150,8 +151,8 @@ export default function Mobile() {
             </div>
           </div>
         </section>
-        <section className="w-full h-full p-16">
-          <div className="w-1/2">
+        <section className="w-full h-full md:p-16 p-4">
+          <div className="md:w-1/2 w-full">
             <h2 className="text-center text-xl w-fit">Formation</h2>
             <p className="headerText">
               Découvrez nos formations variées pour un avenir professionnel
@@ -159,17 +160,17 @@ export default function Mobile() {
             </p>
           </div>
           {/* slider for all the formation */}
-          <section className="p-12 w-full h-fit">
+          <section className="md:p-12 p-4 w-full h-fit">
             {/* <Formation /> */}
             <CarouselUi />
             {/* <Formation /> */}
           </section>
         </section>
-        <section className="w-full h-full p-16 flex justify-around items-center gap-12 min-[1024px]:flex-row  flex-col">
-          <section className="min-[1024px]:w-full!  h-full max-h-fit flex justify-around flex-col gap-12  ">
+        <section className="w-full h-full lg:p-16 p-4 flex justify-around items-center gap-12 min-[1024px]:flex-row  flex-col">
+          <section className="min-[1024px]:w-full! h-full max-h-fit flex justify-around flex-col gap-12  pl-2 pr-2 w-full">
             <div className="md:w-1/2 w-full">
-              <h2 className="text-center text-xl w-fit">Avantages</h2>
-              <p className="headerText">
+              <h2 className="text-center text-xl md:w-fit text-wrap w-full">Avantages</h2>
+              <p className="headerText w-full">
                 Pourquoi choisir le Lycée Technique Coulibaly ?
               </p>
             </div>
@@ -180,8 +181,8 @@ export default function Mobile() {
               des entreprises. Nos élèves profitent de stages pratiques qui
               favorisent leur insertion professionnelle.
             </p>
-            <div className="w-full flex gap-8">
-              <div className="w-1/2 h-56">
+            <div className="w-full flex min-[500px]:flex-row flex-col gap-8">
+              <div className="md:w-1/2 w-full h-56">
                 <Image src={Logo} alt="" width={100} height={100} />
                 <p className="font-bold text-2xs">Partenariats solides</p>
                 <p>
@@ -189,7 +190,7 @@ export default function Mobile() {
                   opportunités d'apprentissage enrichissantes.
                 </p>
               </div>
-              <div className="w-1/2 h-56">
+              <div className="md:w-1/2 w-full h-56">
                 <Image src={Logo} alt="" width={100} height={100} />
                 <p className="font-bold text-2xs">Stages pratiques.</p>
                 <p>
@@ -198,7 +199,7 @@ export default function Mobile() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 min-[500px]:flex-row flex-col">
               <Button className="bg-background p-6 text-black">
                 En savoir plus
               </Button>
@@ -210,34 +211,69 @@ export default function Mobile() {
               </Button>
             </div>
           </section>
-          <div className="grow h-full flex justify-center items-center bg-white rounded-2xl w-1/2 min-[1024px]:w-full! md:min-w-[450px] ">
-            <Image src={PlaceHolder} alt="a descriptive picture "></Image>
+          <div className="grow h-full flex justify-center items-center bg-white rounded-2xl w-full ">
+            <Image src={PlaceHolder} alt="a descriptive picture " className='w-full h-full object-contain '></Image>
           </div>
         </section>
-        <section className="flex flex-col items-center p-[112px_64px] gap-20 w-full h-fit bg-gradient-to-r from-[#ADE8F4] to-[#89C2D9]">
+        <section className="flex flex-col items-center min-[500px]:p-[112px_64px] p-4 gap-20 w-full h-fit bg-gradient-to-r from-[#ADE8F4] to-[#89C2D9]">
           <div className="w-full flex flex-col items-center">
             <h2 className="text-center text-xl w-fit">Équipe</h2>
             <p className="headerText">Notre équipe</p>
             <p>Des professionnels dédiés à votre réussite académique.</p>
           </div>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-16 justify-items-center w-full max-w-[1900px] min-w-fit ">
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
-            <Personel placeHolder={PlaceHolder} />
+            <Personel>
+              <Image
+                src={PlaceHolder}
+                alt="a picture of him/her"
+                className="w-16 h-16 overflow-hidden object-cover rounded-full"
+              ></Image>
+            </Personel>
+            <Personel>
+              <Image
+                src={PlaceHolder}
+                alt="a picture of him/her"
+                className="w-16 h-16 overflow-hidden object-cover rounded-full"
+              ></Image>
+            </Personel>
+            <Personel>
+              <Image
+                src={PlaceHolder}
+                alt="a picture of him/her"
+                className="w-16 h-16 overflow-hidden object-cover rounded-full"
+              ></Image>
+            </Personel>
+            <Personel>
+              <Image
+                src={PlaceHolder}
+                alt="a picture of him/her"
+                className="w-16 h-16 overflow-hidden object-cover rounded-full"
+              ></Image>
+            </Personel>
+            <Personel>
+              <Image
+                src={PlaceHolder}
+                alt="a picture of him/her"
+                className="w-16 h-16 overflow-hidden object-cover rounded-full"
+              ></Image>
+            </Personel>
+            <Personel>
+              <Image
+                src={PlaceHolder}
+                alt="a picture of him/her"
+                className="w-16 h-16 overflow-hidden object-cover rounded-full"
+              ></Image>
+            </Personel>
+            <Personel>
+              <Image
+                src={PlaceHolder}
+                alt="a picture of him/her"
+                className="w-16 h-16 overflow-hidden object-cover rounded-full"
+              ></Image>
+            </Personel>
           </div>
         </section>
-        <section className="flex flex-col items-start p-[112px_64px] gap-20 w-full min-h-fit h-[717.89px] bg-gradient-to-r from-[#81C3D7] to-[#89C2D9]">
+        <section className="flex flex-col items-start min-[500px]:p-[112px_64px] p-4 gap-20 w-full min-h-fit h-[717.89px] bg-gradient-to-r from-[#81C3D7] to-[#89C2D9]">
           <div className="w-1/2 min-w-fit">
             <p className="headerText text-3xl">Témoignages clients</p>
             <p>Des expériences enrichissantes et formatrices au Lycée.</p>
@@ -251,7 +287,7 @@ export default function Mobile() {
             <Review font={space} />
           </div>
         </section>
-        <section className="h-full flex flex-col p-16 gap-16">
+        <section className="h-full flex flex-col min-[500px]:p-16 p-4 gap-16">
           <div>
             <p className="font-bold">contact</p>
             <h2 className="headerText md:text-5xl! text-4xl">Nous Contacter</h2>
